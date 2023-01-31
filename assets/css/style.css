@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    display:block;
+    max-width:100%
+}
+
+:root{
+    --primaryColor: #404EED; 
+    --secundaryColor: #F2F2F2;
+    --textColor: #232323; 
+    --inputColor: #C4C4C4;
+    --placeHolderColor: #818181;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+body.overflow{
+    overflow:hidden;
+}
+
+.textError{
+    margin-top:10px;
+    color:red;
+    font-size:12px;
+}
+
+.loading{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:5;
+    color:white;
+    font-size:32px;
+    font-family: "Inter", sans-serif;
+}
+
+.loading.hidden{
+    display:none;
+}
+
+/* Header Ara */
+
+.container-page #header{
+    background-color: var(--primaryColor);
+    height:89px;
+    padding:16px 80px;
+    display:flex;
+    align-items: center;
+}
+
+/* Main Area */
+
+#main .main-content{
+     display:grid;
+     grid-template-columns: repeat(2, 1fr);
+}
+
+#main .main-content .right-section{
+    background-color:var(--primaryColor);
+    padding:30px;
+}
+
+#main .left-section{
+   width:400px;
+   margin:38px auto;
+}
+
+#main .left-section article{
+    margin-bottom:30px;
+}
+
+#main .left-section article h3{
+    font-weight: normal;
+}
+
+#main .left-section .product-list{
+    margin-top:10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+#main .left-section .product-item{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main .left-section .product-item img{
+    width:75px;
+}
+
+#main .product-item .product-imageArea{
+    background-color:var(--secundaryColor);
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor:pointer;
+    margin-bottom:10px;
+    transition: border .1s;
+}
+
+#main .product-item .product-imageArea.selecionado{
+    border:3px solid var(--primaryColor)
+}
+
+#main .left-section .tecidoSection img{
+    width:54px;
+}
+
+#main .bottomContent{
+    background-color:var(--secundaryColor);
+    padding:30px;
+}
+
+#main .bottomContent .lastOrder-list{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:78vw;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+#main .bottomContent .lastOrder-item{
+    background-color: white;
+    min-width:200px;
+    min-height:236px;
+    border-radius: 10px;
+    padding:15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin:0 7px;
+    cursor: pointer;
+    transition:box-shadow .3s;
+}
+
+#main .bottomContent .lastOrder-item:hover{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px var(--primaryColor);
+}
+
+#main .bottomContent .lastOrder-item img{
+    max-height:180px;
+    object-position: 0 20%;
+}
+
+#main .bottomContent-container{
+    max-width:79vw;
+    margin:auto;
+    position:relative;
+}
+
+#main .bottomContent .arrow ion-icon{
+    font-size:40px;
+    color:var(--placeHolderColor);
+    cursor: pointer;
+    position:absolute;
+}
+
+#main .bottomContent .leftArrow ion-icon{
+    left:-10px;
+    top:110px;
+}
+
+#main .bottomContent .rightArrow ion-icon{
+    right:0px;
+    top:110px;
+}
+
+/* Form area */
+
+#orderForm .inputBlock label{
+    color:var(--textColor);
+    font-size:18px;
+    display:block;
+}
+
+#orderForm .inputBlock input{
+    width:100%;
+    padding:12px 29px 12px 15px;
+    border-radius:10px;
+    background-color:var(--secundaryColor);
+    color:var(--textColor);
+    border:0;
+    font-size:14px;
+    margin-top:10px
+}
+
+#orderForm .inputBlock input.inputError{
+    background-color: #FFE9E9;
+}
+
+#orderForm .inputBlock input::placeholder{
+    font-weight: 400;
+    color:var(--placeHolderColor);
+}
+
+#orderForm button{
+    width:100%;
+    height:40px;
+    border:0;
+    background-color:var(--inputColor);
+    color:white;
+    border-radius:10px;
+    font-size:20px;
+    margin-top:23px;
+}
+
+#orderForm button.active{
+    background-color:var(--primaryColor);
+    cursor: pointer;
+    
+}
+
+/* Login Page */
+
+.container-page .blur{
+    width:100vw;
+    height:100vh;
+    background-color:#404eed6c;
+    position:fixed;
+    z-index:1;
+    backdrop-filter: blur(100px);
+}
+
+.container-page .blur.hidden,
+.container-page .loginPage.hidden{
+    display:none;
+}
+
+.container-page .loginPage{
+    max-width:360px;
+    width:100%;
+    height:380px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    background:transparent;
+    box-shadow: 12px 0 15px -4px rgba(0, 0, 0, 0.123), -12px 0 8px -4px rgba(0, 0, 0, 0.123);
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:1;
+    border-radius:20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-page .loginPage img{
+    margin:0 auto;
+}
+
+.loginPage .inputBlock{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.loginPage .formLogin .formContent{
+    max-width:300px;
+    margin:auto;
+}
+
+.loginPage .formContent #checkLabel{
+    color:white;
+    font-size:13px;
+    font-style: italic;
+    accent-color: var(--primaryColor);
+    font-family: inherit;
+}
+
+.loginPage .formContent #checkInput{
+    margin-right:5px;
+}
+
+.loginPage .formLogin #userLabel{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    visibility: hidden;
+}
+
+.loginPage .formLogin #usernameInput{
+    width:100%;
+    height:45px;
+    color:#0619f3;
+    border:0;
+    outline:0;
+    font-family: inherit;
+}
+
+.loginPage .formLogin button{
+   width:100%;
+   margin-top:10px;
+   height:45px;
+   cursor:pointer;
+   background-color:var(--primaryColor);
+   border:0;
+   color:white;
+   text-transform: uppercase;
+   font-weight: 400;
+   letter-spacing: 1px;
+   font-family: inherit;
+   transition:box-shadow .5s ease;
+}
+
+.loginPage .formLogin button:hover{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.212);;
+}
+
+.loginPage .formContentLogin{
+    margin-top:20px;
+    margin-bottom:15px;
+    display:flex;
+    align-items: center;
+    background-color:white;
+}
+
+.loginPage .formLogin .input-area{
+    display:flex;
+    align-items: center;
+    margin-top:20px;
+}
+
+.loginPage .formContentLogin ion-icon{
+    min-width:40px;
+    color:#061af39a;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/dist/loading-bar.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>projeto-fashiondriven</title>
+</head>
+
+<body class="overflow">
+    <div class="loading hidden">
+        <div id="myItem1" data-preset="circle" data-value="1"></div>
+    </div>
+    <div class="container-page">
+        <div class="blur"></div>
+        <div class="loginPage">
+            <img src="assets/img/avatarblue.png" alt="" width="140">
+            <form class="formLogin">
+                <div class="formContent">
+                    <div class="formContentLogin">
+                        <ion-icon name="person"></ion-icon>
+                        <label for="username" id="userLabel">Username</label>
+                        <input type="text" name="Username" id="usernameInput" placeholder="Username" required>
+                    </div>
+                    <div class="inputBlock">
+                        <label for="remember" id="checkLabel">
+                            <input type="checkbox" name="remember" id="checkInput">
+                            Remember me
+                        </label>
+                    </div>
+                    <button class="loginButton">login</button>
+                </div>
+            </form>
+        </div>
+        <header id="header">
+            <img src="assets/img/Logo.png" alt="logo" class="header-logo">
+        </header>
+        <main id="main">
+            <section class="main-content">
+                <section class="left-section">
+                    <article class="modelSection">
+                        <h3>Escolha o modelo</h3>
+                        <ul class="product-list">
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="model" data-value="t-shirt">
+                                    <img src="assets/img/tshirt.png" alt="tshirt">
+                                </div>
+                                <p>T-shirt</p>
+                            </li>
+
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="model" data-value="long">
+                                    <img src="assets/img/Camiseta.png" alt="Camiseta">
+                                </div>
+                                <p>Camiseta</p>
+                            </li>
+
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="model" data-value="top-tank">
+                                    <img src="assets/img/Mangalonga.png" alt="manga Longa">
+                                </div>
+                                <p>Manga longa</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="golaSection">
+                        <h3>Escolha a gola</h3>
+                        <ul class="product-list">
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="neck" data-value="v-neck">
+                                    <img src="assets/img/GolaV.png" alt="tshirt">
+                                </div>
+                                <p>Gola V</p>
+                            </li>
+
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="neck" data-value="round">
+                                    <img src="assets/img/GolaRedonda.png" alt="Camiseta">
+                                </div>
+                                <p>Gola Redonda</p>
+                            </li>
+
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="neck" data-value="polo">
+                                    <img src="assets/img/GolaPolo.png" alt="manga Longa">
+                                </div>
+                                <p>Gola Polo</p>
+                            </li>
+                        </ul>
+                    </article>
+                   
+                    <article class="tecidoSection">
+                        <h3>Escolha o tecido</h3>
+                        <ul class="product-list">
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="material" data-value="silk">
+                                    <img src="assets/img/Seda.png" alt="tshirt">
+                                </div>
+                                <p>Seda</p>
+                            </li>
+
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="material" data-value="cotton">
+                                    <img src="assets/img/Algodão.png" alt="Camiseta">
+                                </div>
+                                <p>Algodão</p>
+                            </li>
+
+                            <li class="product-item">
+                                <div class="product-imageArea" data-category="material" data-value="polyester">
+                                    <img src="assets/img/Poliester.png" alt="manga Longa">
+                                </div>
+                                <p>Poliéster</p>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <form action="" id="orderForm">
+                        <div class="inputBlock">
+                            <label for="imagemInput">Imagem de referência</label>
+                            <input type="text" name="imagemInput" id="orderForm-input" placeholder="insira o link"
+                                required>
+                        </div>
+                        <button class="orderForm-button" disabled>Confirmar Pedido</button>
+                    </form>
+                </section>
+                <section class="right-section">
+                    <img src="assets/img/ilustração.png" alt="">
+                </section>
+            </section>
+            <section class="bottomContent">
+                <div class="bottomContent-container">
+                    <h3>Últimos pedido</h3>
+                    <div class="leftArrow arrow">
+                        <ion-icon name="arrow-back-circle"></ion-icon>
+                    </div>
+                    <ul class="lastOrder-list">
+                        <li class="lastOrder-item">
+                            <img src="assets/img/Blusa1.png" alt="">
+                            <p><strong>Criador</strong>: Agata</p>
+                        </li>
+
+                    </ul>
+                    <div class="rightArrow arrow">
+                        <ion-icon name="arrow-forward-circle"></ion-icon>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="assets/dist/loading-bar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
