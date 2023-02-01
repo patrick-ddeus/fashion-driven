@@ -374,5 +374,13 @@ body.overflow{
         max-width:450px;
         margin:auto;
      }
+
+     .container-page #header{
+        justify-content: center;
+     }
+
+     .container-page .header-logo{
+        margin-left:50px;
+     }
      
 }
