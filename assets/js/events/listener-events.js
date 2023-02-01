@@ -55,15 +55,17 @@ class StartEvents {
                 valid = false
             }
 
+            if(!(stringToBoolean(this.userIsPersist.getUserStatus()))){
+                alert("Você foi deslogado, por favor logue novamente")
+                location.reload()
+                return
+            }
             if(valid){
                 BodyPost.setImage(this.formInput.value)
                 BodyPost.setShirtSelected(MountShirt.getShirtMontageInfo())
                 ApiMethods.sendShirt(BodyPost.getBodyPost())
                     .then(() => alert("Encomenda Enviada!"))
                     .then(() => ApiMethods.getAllShirst())
-            }else if(!(stringToBoolean(this.userIsPersist.getUserStatus()))){
-                alert("Você foi deslogado, por favor logue novamente")
-                location.reload()
             }
         })
 
