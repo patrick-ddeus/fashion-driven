@@ -1,6 +1,10 @@
 class MountShirt{
     constructor(){
-        this.shirtMontage = {}
+        Object.defineProperty(this, "shirtMontage", {
+           writable: false,
+           configurable: false,
+           value: {}
+        })
     }
 
     montageShirt = (option) => {
