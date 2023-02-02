@@ -3,6 +3,7 @@ class MountShirt{
         Object.defineProperty(this, "shirtMontage", {
            writable: false,
            configurable: false,
+           enumerable:false,
            value: {}
         })
     }
